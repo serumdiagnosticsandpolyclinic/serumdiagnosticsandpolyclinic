@@ -478,6 +478,43 @@ section { padding: 72px 24px; }
 .promo-notice a { color: var(--navy); font-weight: 800; }
 
 
+
+/* ── FLOATING WHATSAPP ── */
+.whatsapp-float{position:fixed;right:22px;bottom:22px;width:62px;height:62px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:1.9rem;box-shadow:0 8px 24px rgba(0,0,0,.22);z-index:9999;transition:transform .25s ease}
+.whatsapp-float:hover{transform:scale(1.1)}
+.whatsapp-float::after{content:"Chat with us";position:absolute;right:72px;white-space:nowrap;background:#1f2937;color:#fff;padding:9px 13px;border-radius:8px;font-size:.75rem;font-weight:700;opacity:0;pointer-events:none;transform:translateX(8px);transition:.25s}
+.whatsapp-float:hover::after{opacity:1;transform:translateX(0)}
+
+/* ── REVIEW ENHANCEMENT ── */
+.rating-badge{display:inline-flex;align-items:center;gap:10px;background:#fff;border:1.5px solid var(--border);border-radius:999px;padding:11px 20px;margin:10px auto 20px;box-shadow:var(--shadow-sm);font-size:.82rem;font-weight:700;color:var(--navy)}
+.rating-badge .rating-number{font-size:1.05rem;color:#f4b400}
+.review-cta{display:flex;justify-content:center;gap:12px;margin-top:28px;flex-wrap:wrap}
+.review-cta a{display:inline-flex;align-items:center;justify-content:center;padding:12px 22px;border-radius:8px;text-decoration:none;font-size:.82rem;font-weight:800;background:var(--teal);color:#fff}
+.review-cta a.secondary{background:#fff;color:var(--navy);border:1.5px solid var(--border)}
+
+/* ── CLINIC GALLERY SLIDER ── */
+#gallery{background:#fff}
+.gallery-slider-wrap{position:relative;max-width:1180px;margin:0 auto}
+.gallery-slider{display:flex;gap:18px;overflow-x:auto;scroll-behavior:smooth;padding:8px 4px 18px;scroll-snap-type:x mandatory;-ms-overflow-style:none;scrollbar-width:none}
+.gallery-slider::-webkit-scrollbar{display:none}
+.gallery-slide{min-width:calc((100% - 36px)/3);height:310px;border-radius:16px;overflow:hidden;position:relative;scroll-snap-align:start;border:1.5px solid var(--border);background:linear-gradient(135deg,#eef7f7,#f8fbff);box-shadow:var(--shadow-sm);flex-shrink:0}
+.gallery-slide img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .5s ease}
+.gallery-slide:hover img{transform:scale(1.05)}
+.gallery-slide::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(4,24,37,.8) 100%)}
+.gallery-caption{position:absolute;left:20px;right:20px;bottom:18px;z-index:2;color:#fff}
+.gallery-caption strong{display:block;font-size:1rem;margin-bottom:4px}
+.gallery-caption span{font-size:.75rem;opacity:.92}
+.gallery-arrow{position:absolute;top:50%;transform:translateY(-50%);width:46px;height:46px;border:0;border-radius:50%;background:#fff;color:var(--navy);font-size:1.5rem;cursor:pointer;z-index:5;box-shadow:0 5px 18px rgba(0,0,0,.18)}
+.gallery-prev{left:-20px}
+.gallery-next{right:-20px}
+.gallery-dots{display:flex;justify-content:center;gap:8px;margin-top:8px}
+.gallery-dot{width:9px;height:9px;border-radius:50%;border:0;background:#cbd5e1;cursor:pointer;padding:0}
+.gallery-dot.active{background:var(--teal);transform:scale(1.15)}
+.gallery-note{text-align:center;font-size:.76rem;color:var(--text-soft);margin-top:15px}
+@media(max-width:900px){.gallery-slide{min-width:calc((100% - 18px)/2)}.gallery-prev{left:4px}.gallery-next{right:4px}}
+@media(max-width:560px){.gallery-slide{min-width:88%}.gallery-arrow{width:40px;height:40px}.gallery-prev{left:8px}.gallery-next{right:8px}}
+
+
 /* ── GOOGLE REVIEWS ── */
 #reviews { background: #f8fbff; }
 .reviews-header {
@@ -774,6 +811,7 @@ section { padding: 72px 24px; }
       <a href="#doctors">Our Doctors</a>
       <a href="#promotions">Offers</a>
       <a href="#reviews">Reviews</a>
+      <a href="#gallery">Gallery</a>
       <a href="#contact">Contact</a>
       <a href="tel:7416209665" class="nav-btn">📞 Book Now</a>
     </nav>
@@ -1442,8 +1480,9 @@ section { padding: 72px 24px; }
     </div>
 
     <div class="rating-summary">
+      <div class="rating-badge"><span class="rating-number">★★★★★</span><span>Google Customer Reviews</span></div>
       <div class="stars">★★★★★</div>
-      <p>Trusted by our patients and customers</p>
+      <p>Real feedback from patients who visited Serum Diagnostics and Polyclinic.</p>
     </div>
 
     <div class="reviews-grid">
@@ -1499,6 +1538,65 @@ section { padding: 72px 24px; }
         <div class="review-source">via <span>Google</span> Reviews</div>
       </article>
     </div>
+    <div class="review-cta">
+      <a href="https://www.google.com/maps/search/?api=1&amp;query=Serum%20diagnostics%20and%20polyclinic%20Gudimalkapur%20Hyderabad" target="_blank" rel="noopener">⭐ Read More on Google</a>
+      <a class="secondary" href="https://www.google.com/maps/search/?api=1&amp;query=Serum%20diagnostics%20and%20polyclinic%20Gudimalkapur%20Hyderabad" target="_blank" rel="noopener">📍 View Our Location</a>
+    </div>
+  </div>
+</section>
+
+<!-- CLINIC GALLERY -->
+<section id="gallery">
+  <div class="section-wrap">
+    <div class="center-head">
+      <div class="sec-eye">Our Clinic</div>
+      <h2 class="sec-title">Clinic Gallery</h2>
+      <p class="sec-sub">Take a look inside Serum Clinic &amp; Diagnostics and explore our patient-friendly facilities.</p>
+    </div>
+
+    <div class="gallery-slider-wrap">
+      <button class="gallery-arrow gallery-prev" aria-label="Previous gallery images" onclick="moveGallery(-1)">‹</button>
+
+      <div class="gallery-slider" id="clinicGallery">
+        <div class="gallery-slide">
+          <img src="images/clinic-exterior.jpg" alt="Clinic Exterior">
+          <div class="gallery-caption"><strong>Clinic Exterior</strong><span>Sample image – replace with your actual photo</span></div>
+        </div>
+        <div class="gallery-slide">
+          <img src="https://placehold.co/900x650/f0f7f8/164e63?text=Reception+Area" alt="Sample Reception Area">
+          <div class="gallery-caption"><strong>Reception Area</strong><span>Sample image – replace with your actual photo</span></div>
+        </div>
+        <div class="gallery-slide">
+          <img src="https://placehold.co/900x650/eaf4f7/164e63?text=Diagnostic+Laboratory" alt="Sample Diagnostic Laboratory">
+          <div class="gallery-caption"><strong>Diagnostic Laboratory</strong><span>Sample image – replace with your actual photo</span></div>
+        </div>
+        <div class="gallery-slide">
+          <img src="https://placehold.co/900x650/f4f7f7/164e63?text=Consultation+Room" alt="Sample Consultation Room">
+          <div class="gallery-caption"><strong>Consultation Room</strong><span>Sample image – replace with your actual photo</span></div>
+        </div>
+        <div class="gallery-slide">
+          <img src="https://placehold.co/900x650/eaf3f1/164e63?text=Medical+Equipment" alt="Sample Medical Equipment">
+          <div class="gallery-caption"><strong>Medical Equipment</strong><span>Sample image – replace with your actual photo</span></div>
+        </div>
+        <div class="gallery-slide">
+          <img src="https://placehold.co/900x650/f2f6fa/164e63?text=Patient+Care" alt="Sample Patient Care">
+          <div class="gallery-caption"><strong>Patient Care</strong><span>Sample image – replace with your actual photo</span></div>
+        </div>
+      </div>
+
+      <button class="gallery-arrow gallery-next" aria-label="Next gallery images" onclick="moveGallery(1)">›</button>
+    </div>
+
+    <div class="gallery-dots" id="galleryDots">
+      <button class="gallery-dot active" onclick="goGallery(0)" aria-label="Gallery slide 1"></button>
+      <button class="gallery-dot" onclick="goGallery(1)" aria-label="Gallery slide 2"></button>
+      <button class="gallery-dot" onclick="goGallery(2)" aria-label="Gallery slide 3"></button>
+      <button class="gallery-dot" onclick="goGallery(3)" aria-label="Gallery slide 4"></button>
+      <button class="gallery-dot" onclick="goGallery(4)" aria-label="Gallery slide 5"></button>
+      <button class="gallery-dot" onclick="goGallery(5)" aria-label="Gallery slide 6"></button>
+    </div>
+
+    <p class="gallery-note">The sample images are placeholders. You can replace them later with your actual clinic photographs.</p>
   </div>
 </section>
 
@@ -1622,5 +1720,46 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
   });
 });
 </script>
+
+<!-- FLOATING WHATSAPP BUTTON -->
+<a class="whatsapp-float" href="https://wa.me/917416209665?text=Hello%20Serum%20Clinic%2C%20I%20would%20like%20to%20know%20more%20about%20your%20services." target="_blank" rel="noopener" aria-label="Chat with Serum Clinic on WhatsApp" title="Chat with us on WhatsApp">💬</a>
+
+
+<script>
+function getGalleryStep(){
+  const gallery = document.getElementById('clinicGallery');
+  const slide = gallery.querySelector('.gallery-slide');
+  const gap = 18;
+  return slide ? slide.offsetWidth + gap : 300;
+}
+
+function updateGalleryDots(){
+  const gallery = document.getElementById('clinicGallery');
+  const dots = document.querySelectorAll('#galleryDots .gallery-dot');
+  const step = getGalleryStep();
+  const index = Math.max(0, Math.min(dots.length - 1, Math.round(gallery.scrollLeft / step)));
+  dots.forEach((dot, i) => dot.classList.toggle('active', i === index));
+}
+
+function moveGallery(direction){
+  const gallery = document.getElementById('clinicGallery');
+  gallery.scrollBy({ left: direction * getGalleryStep(), behavior: 'smooth' });
+  setTimeout(updateGalleryDots, 350);
+}
+
+function goGallery(index){
+  const gallery = document.getElementById('clinicGallery');
+  gallery.scrollTo({ left: index * getGalleryStep(), behavior: 'smooth' });
+  setTimeout(updateGalleryDots, 350);
+}
+
+document.addEventListener('DOMContentLoaded', function(){
+  const gallery = document.getElementById('clinicGallery');
+  if(gallery) gallery.addEventListener('scroll', () => {
+    window.requestAnimationFrame(updateGalleryDots);
+  });
+});
+</script>
+
 </body>
 </html>
