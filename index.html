@@ -477,6 +477,129 @@ section { padding: 72px 24px; }
 }
 .promo-notice a { color: var(--navy); font-weight: 800; }
 
+
+/* ── GOOGLE REVIEWS ── */
+#reviews { background: #f8fbff; }
+.reviews-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 12px;
+}
+.google-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: #fff;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.45rem;
+  box-shadow: var(--shadow-sm);
+}
+.rating-summary {
+  text-align: center;
+  margin-bottom: 34px;
+}
+.rating-summary .stars {
+  color: #f4b400;
+  font-size: 1.25rem;
+  letter-spacing: 2px;
+}
+.rating-summary p {
+  font-size: .82rem;
+  color: var(--text-soft);
+  margin-top: 5px;
+}
+.reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+.review-card {
+  background: #fff;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px;
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  transition: all .3s;
+}
+.review-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow);
+  border-color: var(--teal);
+}
+.review-top {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  margin-bottom: 14px;
+}
+.review-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--teal-light);
+  color: var(--teal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: .88rem;
+  flex-shrink: 0;
+}
+.review-name {
+  color: var(--navy);
+  font-size: .88rem;
+  font-weight: 700;
+  line-height: 1.25;
+}
+.review-meta {
+  font-size: .67rem;
+  color: var(--text-soft);
+  margin-top: 2px;
+}
+.review-stars {
+  color: #f4b400;
+  font-size: .92rem;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+.review-time {
+  color: var(--text-soft);
+  font-size: .68rem;
+  margin-left: 8px;
+  letter-spacing: 0;
+}
+.review-text {
+  font-size: .77rem;
+  color: var(--text-md);
+  line-height: 1.7;
+  flex: 1;
+}
+.review-source {
+  margin-top: 15px;
+  font-size: .67rem;
+  font-weight: 700;
+  color: var(--text-soft);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.review-source span {
+  color: #4285f4;
+}
+@media (max-width: 1024px) {
+  .reviews-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .reviews-grid { grid-template-columns: 1fr; }
+}
+
 /* ── CONTACT ── */
 #contact { background: var(--navy-dark); color: #fff; }
 .contact-grid {
@@ -650,6 +773,7 @@ section { padding: 72px 24px; }
       <a href="#services">Services</a>
       <a href="#doctors">Our Doctors</a>
       <a href="#promotions">Offers</a>
+      <a href="#reviews">Reviews</a>
       <a href="#contact">Contact</a>
       <a href="tel:7416209665" class="nav-btn">📞 Book Now</a>
     </nav>
@@ -1302,6 +1426,82 @@ section { padding: 72px 24px; }
   </div>
 </section>
 
+
+<!-- GOOGLE REVIEWS -->
+<section id="reviews">
+  <div class="section-wrap">
+    <div class="center-head">
+      <div class="sec-eye">Patient Feedback</div>
+      <h2 class="sec-title">What Our Customers Say</h2>
+      <p class="sec-sub">Real feedback shared by our customers about their experience with Serum Diagnostics and Polyclinic.</p>
+    </div>
+
+    <div class="reviews-header">
+      <div class="google-icon">G</div>
+      <div style="font-size:1.02rem;font-weight:800;color:var(--navy);">Google Reviews</div>
+    </div>
+
+    <div class="rating-summary">
+      <div class="stars">★★★★★</div>
+      <p>Trusted by our patients and customers</p>
+    </div>
+
+    <div class="reviews-grid">
+      <article class="review-card">
+        <div class="review-top">
+          <div class="review-avatar">S</div>
+          <div>
+            <div class="review-name">Syed Shahed</div>
+            <div class="review-meta">Local Guide · 28 reviews · 6 photos</div>
+          </div>
+        </div>
+        <div class="review-stars">★★★★★ <span class="review-time">3 months ago</span></div>
+        <p class="review-text">“Great place for affordable diagnostics... loved the Dr’s approach and professionalism.”</p>
+        <div class="review-source">via <span>Google</span> Reviews</div>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div class="review-avatar">W</div>
+          <div>
+            <div class="review-name">wesam syed</div>
+            <div class="review-meta">1 review</div>
+          </div>
+        </div>
+        <div class="review-stars">★★★★★ <span class="review-time">3 months ago</span></div>
+        <p class="review-text">“Highly experienced team of doctors.”</p>
+        <div class="review-source">via <span>Google</span> Reviews</div>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div class="review-avatar">K</div>
+          <div>
+            <div class="review-name">*R* KHAN*</div>
+            <div class="review-meta">3 reviews · 10 photos</div>
+          </div>
+        </div>
+        <div class="review-stars">★★★★★ <span class="review-time">a year ago</span></div>
+        <p class="review-text">“Serum Diagnostic, BEST affordable price and secure quality lab, staff cooperative with patients. I referred to choose SERUM DIAGNOSTIC, thanks.”</p>
+        <div class="review-source">via <span>Google</span> Reviews</div>
+      </article>
+
+      <article class="review-card">
+        <div class="review-top">
+          <div class="review-avatar">M</div>
+          <div>
+            <div class="review-name">Mohd Amir Ali Khan</div>
+            <div class="review-meta">Local Guide · 7 reviews · 4 photos</div>
+          </div>
+        </div>
+        <div class="review-stars">★★★★★ <span class="review-time">3 years ago</span></div>
+        <p class="review-text">“Doctors are very nice and quite friendly in nature. And well experienced...”</p>
+        <div class="review-source">via <span>Google</span> Reviews</div>
+      </article>
+    </div>
+  </div>
+</section>
+
 <!-- CONTACT -->
 <section id="contact">
   <div class="section-wrap">
@@ -1361,11 +1561,14 @@ section { padding: 72px 24px; }
       <div>
         <div class="map-box">
           <iframe
-            src="https://maps.google.com/maps?q=Gudimalkapur+Hyderabad+Telangana&t=&z=15&ie=UTF8&iwloc=&output=embed"
-            allowfullscreen
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.581253618849!2d78.43448523035603!3d17.383871386700097!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb97ab4b286745%3A0x134eb2deff203b6b!2sSerum%20diagnostics%20and%20polyclinic%20%7C%20Blood%20Test%2C%20LFT%2C%20Home%20Collection%2C%20Stroke%20Treatment!5e0!3m2!1sen!2sae!4v1786685062291!5m2!1sen!2sae"
+            width="600"
+            height="450"
+            style="border:0;"
+            allowfullscreen=""
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            title="Serum Clinic Location Map">
+            referrerpolicy="strict-origin-when-cross-origin"
+            title="Serum Diagnostics and Polyclinic Location Map">
           </iframe>
           <div class="map-addr">
             <span>📍</span>
